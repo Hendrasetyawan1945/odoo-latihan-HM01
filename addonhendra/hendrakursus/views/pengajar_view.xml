@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pengajarku_view_tree" model="ir.ui.view">
+        <field name="name">Pengajar kkkkkkk</field>
+        <field name="model">pengajarku.pengajar</field>
+        <field name="arch" type="xml">
+            <tree string="_tree">
+                <field name="name"/>
+                <field name="alamat"/>
+            </tree>
+        </field>
+    </record>
+
+   <record id="pengajarku_action" model="ir.actions.act_window">
+       <field name="name">Pengajar kkkkkkyyyy</field>
+       <field name="type">ir.actions.act_window</field>
+       <field name="res_model">pengajarku.pengajar</field>
+       <field name="view_mode">tree,form</field>
+   </record>
+
+    <menuitem id="pengajar_menu_categ"
+              name="Data pengajar"
+              parent="kursusku_categ"
+              action="pengajarku_action"
+              sequence="20"/>
+</odoo>

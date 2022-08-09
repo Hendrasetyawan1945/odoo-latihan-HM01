@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="kursusku_kursus_view_tree" model="ir.ui.view">
+        <field name="name">kursuskuku KKKK</field>
+        <field name="model">kursusku.kursus</field>
+        <field name="arch" type="xml">
+            <tree string="_tree">
+                <field name="name"/>
+                <field name="keterangan"/>
+                <field name="kategori"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+   <record id="kursusku_kursus_action" model="ir.actions.act_window">
+       <field name="name">Kursus</field>
+       <field name="type">ir.actions.act_window</field>
+       <field name="res_model">kursusku.kursus</field>
+       <field name="view_mode">tree,form</field>
+   </record>
+
+   <!-- This Menu Item must have a parent and an action -->
+   <menuitem id="kursusku_kursus_menu_action"
+             name="KURSUSKU"
+             parent="kursusku_categ"
+             action="kursusku_kursus_action"
+             sequence="10"/>
+</odoo>
