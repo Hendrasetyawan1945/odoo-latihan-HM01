@@ -12,15 +12,15 @@
     </record>
 
    <record id="pengajarku_action" model="ir.actions.act_window">
-       <field name="name">Pengajar kkkkkkyyyy</field>
+       <field name="name">Pengajar </field>
        <field name="type">ir.actions.act_window</field>
        <field name="res_model">pengajarku.pengajar</field>
        <field name="view_mode">tree,form</field>
    </record>
 
-    <menuitem id="pengajar_menu_categ"
+    <menuitem id="pengajar_menu_action"
               name="Data pengajar"
-              parent="kursusku_categ"
+              parent="data_pengajar_categ"
               action="pengajarku_action"
               sequence="20"/>
 </odoo>

@@ -7,8 +7,14 @@
 
     <!-- This Menu Item Must have a parent -->
     <menuitem id="kursusku_categ"
-              name="Selamat datang di Kursusku"
+              name="Daftar Kursusku"
               parent="kursusku_root"
               sequence="10"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="data_pengajar_categ"
+              name="Data Pengajar di KursusKu"
+              parent="kursusku_root"
+              sequence="20"/>
 
 </odoo>

@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_kursusku_kursus,access.kursusku.kursusrsus,model_kursusku_kursus,,1,1,1,1
 access_pengajarku_pengajar,access.pengajarku.pengajar,model_pengajarku_pengajar,,1,1,1,1
+access_keterangankursus_keterangan,access.keterangankursus.keterangan,model_keterangankursus_keterangan,,1,1,1,1
 
