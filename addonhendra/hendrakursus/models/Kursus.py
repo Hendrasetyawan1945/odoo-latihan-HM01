@@ -7,5 +7,11 @@ class Kursus(models.Model):
 
     name = fields.Char(string='Daftar kursus')
     kategori= fields.Selection(string='kategori pembelajaran',selection=[('teknologi','Teknologi'),('umum','Umum'),('manufaktur','Manufaktur')],required=True)
-
-
+    tingkatan = fields.Many2one(
+        comodel_name='keterangankursus.keterangan',
+        string='Diskripsi Belajar',
+        required=False)
+    tutor = fields.Many2one(
+        comodel_name='pengajarku.pengajar',
+        string='Pengajar',
+        required=False)

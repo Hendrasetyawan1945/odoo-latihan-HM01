@@ -13,3 +13,10 @@ class datapengajar(models.Model):
     alamat = fields.Char(
         string='Alamat',
         required=False)
+
+    datad= fields.Many2one(
+        comodel_name='ddpengajar.datadirip',
+        string='Data pengajar',
+        required=False)
+
+

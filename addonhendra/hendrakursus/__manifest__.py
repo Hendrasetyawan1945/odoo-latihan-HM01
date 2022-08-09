@@ -30,6 +30,7 @@
         'views/menu.xml',
         'views/kursus_view.xml',
         'views/pengajar_view.xml',
+        'views/datadiri_view.xml',
         'views/keterangan_view.xml'
     ],
     # only loaded in demonstration mode

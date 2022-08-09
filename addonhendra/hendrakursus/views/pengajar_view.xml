@@ -22,5 +22,5 @@
               name="Data pengajar"
               parent="data_pengajar_categ"
               action="pengajarku_action"
-              sequence="20"/>
+              sequence="10"/>
 </odoo>

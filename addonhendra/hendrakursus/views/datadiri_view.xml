@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="datadiri_view_tree" model="ir.ui.view">
+        <field name="name">datadiri_view_tree</field>
+        <field name="model">ddpengajar.datadirip</field>
+        <field name="arch" type="xml">
+            <tree string="datadiri_tree">
+                <field name="name"/>
+                <field name="lusan"/>
+                <field name="ttl"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="datadiri_action" model="ir.actions.act_window">
+        <field name="name">Data diri</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ddpengajar.datadirip</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="datadiri_categ"
+              name="Data diri Pengajar"
+              parent="data_pengajar_categ"
+              action="datadiri_action"
+              sequence="40"/>
+</odoo>
