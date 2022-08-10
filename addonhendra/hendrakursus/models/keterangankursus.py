@@ -15,3 +15,4 @@ class kerangankursus(models.Model):
         inverse_name='tingkatan',
         string='Kelas id',
         required=False)
+

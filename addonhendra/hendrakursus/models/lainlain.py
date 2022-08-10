@@ -7,10 +7,6 @@ class ModelName(models.Model):
 
     name = fields.Char(string='Dafrar kelas Lain-lain')
 
-    kelaslain = fields.Char(
-        string='Kelas lain',
-        required=False)
-
     tingkatan = fields.Many2one(
         comodel_name='keterangankursus.keterangan',
         string='Keterangan Kelas lain',

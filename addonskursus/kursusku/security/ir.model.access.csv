@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_kursusku_kursusku,access.kursusku.kursusku,model_kursusku_kursusku,,1,1,1,1
+access_kursusku_python,access.kursusku.python,model_kursusku_python,,1,1,1,1
+access_kursusku_tingkat,access.kursusku.tingkat,model_kursusku_tingkat,,1,1,1,1

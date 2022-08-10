@@ -3,7 +3,22 @@
 
     <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
     <menuitem id="kursusku_root"
-              name="Kursus KU"
+              name="Belajar Di MYKursus "
               sequence="10"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="pemerograman_categ"
+              name="Kursus Pemerograman"
+              parent="kursusku_root"
+              sequence="10"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="bahasa_categ"
+              name="Kursus bahasa"
+              parent="kursusku_root"
+              sequence="20"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="tingkatan_categ"
+              name="Tingakatan kursus"
+              parent="kursusku_root"
+              sequence="30"/>
 
 </odoo>

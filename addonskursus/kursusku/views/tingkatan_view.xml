@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="tingkatan_view_tree" model="ir.ui.view">
+        <field name="name">tingkatan_view_tree</field>
+        <field name="model">kursusku.tingkat</field>
+        <field name="arch" type="xml">
+            <tree string="tingkatan_tree">
+                <field name="name"/>
+                <field name="keterangan"/>
+                <field name="tingkat_ids"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="tingkat_action" model="ir.actions.act_window">
+        <field name="name">Tingkat Level Kursus</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kursusku.tingkat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="tingkat_categ"
+              name="Tingkatan Pembelajaran"
+              parent="tingkatan_categ"
+              action="tingkat_action"
+              sequence="10"/>
+</odoo>
