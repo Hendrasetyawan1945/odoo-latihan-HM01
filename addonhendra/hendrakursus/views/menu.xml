@@ -11,10 +11,15 @@
               parent="kursusku_root"
               sequence="10"/>
 
+     <menuitem id="kelaslain_categ"
+              name="KursusKu Lain-lain"
+              parent="kursusku_root"
+              sequence="20"/>
+
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="data_pengajar_categ"
               name="Data Pengajar di KursusKu"
               parent="kursusku_root"
-              sequence="20"/>
+              sequence="30"/>
 
 </odoo>

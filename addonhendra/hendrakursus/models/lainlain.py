@@ -1,22 +1,25 @@
+from odoo import fields, models, api
 
-from odoo import api, fields, models
 
-class Kursus(models.Model):
-    _name = 'kursusku.kursus'
-    _description = 'Nama kategori'
+class ModelName(models.Model):
+    _name = 'lainlain.lainkelas'
+    _description = 'Description'
 
-    name = fields.Char(string='Daftar kursus')
-    kategori= fields.Selection(string='kategori pembelajaran',selection=[('teknologi','Teknologi'),('umum','Umum'),('manufaktur','Manufaktur')],required=True)
-    tingkatan = fields.Many2one(
-        comodel_name='keterangankursus.keterangan',
-        string='Diskripsi Belajar',
+    name = fields.Char(string='Dafrar kelas Lain-lain')
+
+    kelaslain = fields.Char(
+        string='Kelas lain',
         required=False)
 
-    tutor = fields.Many2one(
+    tingkatan = fields.Many2one(
+        comodel_name='keterangankursus.keterangan',
+        string='Keterangan Kelas lain',
+        required=False)
+
+    pengajar = fields.Many2one(
         comodel_name='pengajarku.pengajar',
         string='Pengajar',
         required=False)
-
     kapasitas = fields.Integer(
         string='Kapasitas Kelas',
         required=False)
@@ -29,6 +32,16 @@ class Kursus(models.Model):
     def _compute_sisa(self):
         for a in self:
             a.sisa = a.kapasitas
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -18,6 +18,7 @@
     # for the full list
     'category': 'Productivity',
     'version': '0.1',
+    'application': True,
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
@@ -31,7 +32,8 @@
         'views/kursus_view.xml',
         'views/pengajar_view.xml',
         'views/datadiri_view.xml',
-        'views/keterangan_view.xml'
+        'views/keterangan_view.xml',
+        'views/lainlain_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

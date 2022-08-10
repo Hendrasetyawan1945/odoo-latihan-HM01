@@ -9,6 +9,7 @@
                 <field name="lusan"/>
                 <field name="ttl"/>
                 <field name="status"/>
+                <field name="datapengajar_ids"/>
             </tree>
         </field>
     </record>

@@ -3,4 +3,5 @@ access_kursusku_kursus,access.kursusku.kursusrsus,model_kursusku_kursus,,1,1,1,1
 access_pengajarku_pengajar,access.pengajarku.pengajar,model_pengajarku_pengajar,,1,1,1,1
 access_keterangankursus_keterangan,access.keterangankursus.keterangan,model_keterangankursus_keterangan,,1,1,1,1
 access_ddpengajar_datadirip,access.ddpengajar.datadirip,model_ddpengajar_datadirip,,1,1,1,1
+access_lainlain_lainkelas,access.lainlain.lainkelas,model_lainlain_lainkelas,,1,1,1,1
 

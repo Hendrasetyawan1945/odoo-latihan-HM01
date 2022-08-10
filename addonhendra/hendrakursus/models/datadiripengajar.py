@@ -18,3 +18,9 @@ class datadiripengajar(models.Model):
                    ('belum menikah', 'Belum Menikah'), ],
         required=False, )
 
+    datapengajar_ids = fields.One2many(
+        comodel_name='pengajarku.pengajar',
+        inverse_name='datad',
+        string='Datapengajar_ids',
+        required=False)
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="lainlain_view_tree" model="ir.ui.view">
+        <field name="name">lainlain_view_tree</field>
+        <field name="model">lainlain.lainkelas</field>
+        <field name="arch" type="xml">
+            <tree string="lainlain_tree">
+                <field name="name"/>
+                <field name="tingkatan"/>
+                <field name="pengajar"/>
+                <field name="kapasitas"/>
+                <field name="sisa"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="lainlain_action" model="ir.actions.act_window">
+        <field name="name">Kelas Lain lain</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lainlain.lainkelas</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="lainlain_categ"
+              name="Kelas Lain-lain"
+              parent="kelaslain_categ"
+              action="lainlain_action"
+              sequence="20"/>
+    
+</odoo>

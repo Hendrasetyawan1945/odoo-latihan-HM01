@@ -10,3 +10,8 @@ class kerangankursus(models.Model):
     keterangan = fields.Selection(string='keterangan',
                                   selection=[('dasar', 'Dasar'), ('menegah', 'Menengah'), ('kakap', 'Kakap')],
                                   required=True)
+    kelas_ids = fields.One2many(
+        comodel_name='kursusku.kursus',
+        inverse_name='tingkatan',
+        string='Kelas id',
+        required=False)

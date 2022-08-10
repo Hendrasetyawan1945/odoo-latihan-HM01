@@ -5,3 +5,4 @@ from . import Kursus
 from . import datapengajar
 from . import keterangankursus
 from . import datadiripengajar
+from . import lainlain

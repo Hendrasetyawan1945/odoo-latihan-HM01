@@ -10,6 +10,8 @@
                 <field name ="tingkatan"/>
                 <field name="kategori"/>
                 <field name="tutor"/>
+                <field name="kapasitas"/>
+                <field name="sisa"/>
             </tree>
         </field>
     </record>
