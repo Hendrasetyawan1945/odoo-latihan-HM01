@@ -21,6 +21,12 @@ class tingkat(models.Model):
         string='Id tingkatan',
         required=False)
 
+    tingkat_ids = fields.One2many(
+        comodel_name='kursusku.inggris',
+        inverse_name='level_kesulitan',
+        string='Id tingkatan',
+        required=False)
+
 
 
 

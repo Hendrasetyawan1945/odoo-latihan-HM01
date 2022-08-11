@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inggris_view_tree" model="ir.ui.view">
+        <field name="name">inggris_view_tree</field>
+        <field name="model">kursusku.inggris</field>
+        <field name="arch" type="xml">
+            <tree string="inggris_tree">
+                <field name="name"/>
+                <field name="level_kesulitan"/>
+                <field name="kapasitas"/>
+                <field name="sisa"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="binggris_action" model="ir.actions.act_window">
+        <field name="name">Daftar kursus Inggris</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kursusku.inggris</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="inggris_categ"
+              name="Kursus Inggris"
+              parent="bahasa_categ"
+              action="binggris_action"
+              sequence="10"/>
+</odoo>

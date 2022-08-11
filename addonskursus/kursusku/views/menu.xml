@@ -15,10 +15,22 @@
               name="Kursus bahasa"
               parent="kursusku_root"
               sequence="20"/>
+
     <!-- This Menu Item Must have a parent -->
     <menuitem id="tingkatan_categ"
               name="Tingakatan kursus"
               parent="kursusku_root"
               sequence="30"/>
+
+    <menuitem id="peserta_categ"
+              name="Peserta kursus"
+              parent="kursusku_root"
+              sequence="40"/>
+
+    <menuitem id="pengajar_categ"
+              name="Pengajar kursus"
+              parent="kursusku_root"
+              sequence="50"/>
+
 
 </odoo>

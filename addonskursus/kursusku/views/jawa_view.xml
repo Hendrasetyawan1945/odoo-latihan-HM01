@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="jawa_view_tree" model="ir.ui.view">
+        <field name="name">jawa_view_tree</field>
+        <field name="model">kursusku.jawa</field>
+        <field name="arch" type="xml">
+            <tree string="inggris_tree">
+                <field name="name"/>
+                <field name="level_kesulitan"/>
+                <field name="kapasitas"/>
+                <field name="sisa"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="jawa_action" model="ir.actions.act_window">
+        <field name="name">Daftar kursus Jawa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kursusku.jawa</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="jawa_categ"
+              name="Kursus Jawa"
+              parent="bahasa_categ"
+              action="jawa_action"
+              sequence="20"/>
+</odoo>

@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_kursusku_python,access.kursusku.python,model_kursusku_python,,1,1,1,1
+access_kursusku_inggris,access.kursusku.inggris,model_kursusku_inggris,,1,1,1,1
+access_kursusku_jawa,access.kursusku.jawa,model_kursusku_jawa,,1,1,1,
+access_kursusku_bahasalain,access.kursusku.bahasalain,model_kursusku_bahasalain,,1,1,1,1
+access_kursusku_pengajar,access.pengajar.jawa,model_kursusku_pengajar,,1,1,1,1
 access_kursusku_tingkat,access.kursusku.tingkat,model_kursusku_tingkat,,1,1,1,1

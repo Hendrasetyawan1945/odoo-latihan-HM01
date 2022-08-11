@@ -22,7 +22,7 @@
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="tingkat_categ"
               name="Tingkatan Pembelajaran"
-              parent="tingkatan_categ"
+              parent="kursusku_root"
               action="tingkat_action"
-              sequence="10"/>
+              sequence="30"/>
 </odoo>

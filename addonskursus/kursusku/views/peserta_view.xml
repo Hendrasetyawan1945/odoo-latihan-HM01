@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="peserta_action" model="ir.actions.act_window">
+        <field name="name">peserta kursus</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="peserta_menu_categ"
+              name="Data peserta Kursus"
+              parent="peserta_categ"
+              action="peserta_action"
+              sequence="10"/>
+</odoo>

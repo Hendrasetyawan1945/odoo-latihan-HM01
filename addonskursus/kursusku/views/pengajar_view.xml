@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pengajar_view_tree" model="ir.ui.view">
+        <field name="name">pengajar_view_tree</field>
+        <field name="model">kursusku.pengajar</field>
+        <field name="arch" type="xml">
+            <tree string="pengajar_tree">
+                <field name="name"/>
+                <field name="lusan"/>
+                <field name="ttl"/>
+                <field name="status"/>
+                <field name="datapengajar_ids"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="pengajar_action" model="ir.actions.act_window">
+        <field name="name">Data diri Pengajar</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kursusku.pengajar</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="pengajarmenu_categ"
+              name="Data diri Pengajar"
+              parent="kursusku_root"
+              action="pengajar_action"
+              sequence="40"/>
+</odoo>

@@ -16,7 +16,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Service',
+    'category': 'Services',
     'version': '0.1',
     'application': True,
 
@@ -30,7 +30,12 @@
         'views/templates.xml',
         'views/menu.xml',
         'views/python_view.xml',
-        'views/tingkatan_view.xml'
+        'views/tingkatan_view.xml',
+        'views/inggris_view.xml',
+        'views/jawa_view.xml',
+        'views/bahasalain_view.xml',
+        'views/peserta_view.xml',
+        'views/pengajar_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
