@@ -34,6 +34,7 @@
         'views/inggris_view.xml',
         'views/jawa_view.xml',
         'views/bahasalain_view.xml',
+        'views/penyelenggara_view.xml',
         'views/peserta_view.xml',
         'views/pengajar_view.xml',
     ],

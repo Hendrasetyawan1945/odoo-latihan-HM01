@@ -32,5 +32,9 @@
               parent="kursusku_root"
               sequence="50"/>
 
+    <menuitem id="penyelenggara_categ"
+              name="Penyelenggra di kursusku"
+              parent="kursusku_root"
+              sequence="60"/>
 
 </odoo>

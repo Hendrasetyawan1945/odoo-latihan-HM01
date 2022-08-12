@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="penyelenggra_inherit_view_tree" model="ir.ui.view">
+        <field name="name">penyelenggra_view_tree</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="kategori_pilihan"/>
+                <field name="is_tutor"/>
+                <field name="is_admin"/>
+                <field name="is_keterangan"/>
+            </xpath>
+            <xpath expr="//field[@name='display_name']" position="attributes">
+                <attribute name="string">Jenengmu yokk!!!</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='email']" position="attributes">
+                <attribute name="string">Ini List Email!!!</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="penyelenggra_inherit_view_form" model="ir.ui.view">
+        <field name="name">penyelenggra_inherit_view_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="after">
+                <field name="kategori_pilihan"/>
+                <field name="is_tutor"/>
+                <field name="is_admin"/>
+                <field name="is_keterangan"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="penyelenggara_action" model="ir.actions.act_window">
+        <field name="name">Penyelenggra kursus</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="penyelenggara_menu_categ"
+              name="penyelenggra Kursus"
+              parent="kursusku_root"
+              action="penyelenggara_action"
+              sequence="50"/>
+</odoo>

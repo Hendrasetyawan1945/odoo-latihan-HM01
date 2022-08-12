@@ -6,5 +6,6 @@ from . import tingkat
 from . import inggris
 from . import jawa
 from . import peserta
+from . import penyelenggara
 from . import pengajar
 
