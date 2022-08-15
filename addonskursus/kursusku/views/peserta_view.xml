@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="peserta_inherit_view_tree" model="ir.ui.view">
-        <field name="name">peserta_view_tree</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_tree"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='email']" position="after">
-                <field name="kategori_pilihan"/>
-            </xpath>
-            <xpath expr="//field[@name='phone']" position="attributes">
-                <attribute name="string">No Telepon yakk!!!</attribute>
-                <attribute name="readonly">1</attribute>
-            </xpath>
-        </field>
-    </record>
-
-    <record id="peserta_inherit_view_form" model="ir.ui.view">
-        <field name="name">peserta_inherit_view_form</field>
+     <record id="peserta_form_inherite" model="ir.ui.view">
+        <field name="name">peserta_form_inherite</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='vat']" position="after">
-                <field name="kategori_pilihan"/>
-                <field name="is_tutor"/>
+            <xpath expr="//field[@name='is_admin']" position="after">
+                <field name="is_peserta"/>
             </xpath>
         </field>
     </record>
 
+
+    <record id="peserta_search" model="ir.ui.view">
+        <field name="name">peserta_search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <filter  string="Peserta" name="pesertanya"  domain="[('is_peserta','=',True)]"/>
+            </field>
+       </field>
+    </record>
     <record id="peserta_action" model="ir.actions.act_window">
         <field name="name">peserta kursus</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{
+                'search_default_pesertanya':1,
+                'default_is_peserta':True,
+            }
+        </field>
     </record>
 
     <!-- This Menu Item must have a parent and an action -->

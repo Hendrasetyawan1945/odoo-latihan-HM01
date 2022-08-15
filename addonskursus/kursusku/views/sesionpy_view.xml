@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sesionpy_view_tree" model="ir.ui.view">
+        <field name="name">sesionpy_view_tree</field>
+        <field name="model">kursusku.sesionpy</field>
+        <field name="arch" type="xml">
+            <tree string="sesionpy_tree">
+                <field name="nama_kursus"/>
+                <field name="tgl_mulai"/>
+                <field name="peserta_ids"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="sesionpy_action" model="ir.actions.act_window">
+        <field name="name"></field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kursusku.sesionpy</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    
+    <menuitem id="sesionpy_categ" 
+              name="Sesion Python" 
+              parent="pemerograman_categ"  
+              action="sesionpy_action"
+              sequence="20"/>
+</odoo>

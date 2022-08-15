@@ -37,6 +37,7 @@
         'views/penyelenggara_view.xml',
         'views/peserta_view.xml',
         'views/pengajar_view.xml',
+        'views/sesionpy_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

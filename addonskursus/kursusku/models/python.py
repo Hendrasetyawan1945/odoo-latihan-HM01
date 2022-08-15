@@ -27,6 +27,8 @@ class python(models.Model):
         required=False)
 
 
+
+
     @api.depends('level_kesulitan')
     def _compute_harga(self):
         for a in self:
