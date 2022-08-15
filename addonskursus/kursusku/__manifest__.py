@@ -38,6 +38,8 @@
         'views/peserta_view.xml',
         'views/pengajar_view.xml',
         'views/sesionpy_view.xml',
+        'views/sesioninggris_view.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

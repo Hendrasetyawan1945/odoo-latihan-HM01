@@ -9,4 +9,5 @@ from . import peserta
 from . import penyelenggara
 from . import pengajar
 from . import sesionpy
+from . import sesioninggris
 

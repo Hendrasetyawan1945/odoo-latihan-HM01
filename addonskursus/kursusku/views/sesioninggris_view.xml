@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sesioninggris_view_tree" model="ir.ui.view">
+        <field name="name">sesioninggris_view_tree</field>
+        <field name="model">kursusku.sesioninggris</field>
+        <field name="arch" type="xml">
+            <tree string="sesioninggris_tree">
+                <field name="nama_kursus"/>
+                <field name="tgl_mulai"/>
+                <field name="pesertaa_idss"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sesioninggris_action" model="ir.actions.act_window">
+        <field name="name">Inggris Sesion</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kursusku.sesioninggris</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="sesioninggris_categ"
+              name="Sesion Inggris"
+              parent="pemerograman_categ"
+              action="sesioninggris_action"
+              sequence="30"/>
+</odoo>
