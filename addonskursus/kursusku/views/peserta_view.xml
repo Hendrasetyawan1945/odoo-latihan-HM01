@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="peserta_tree_inherite" model="ir.ui.view">
+        <field name="name">peserta_tree_inherite</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <!-- Add new fields here -->
+                <field name="is_peserta"/>
+            </xpath>
+            <xpath expr="//field[@name='is_peserta']" position="after">
+                <!-- Add new fields here -->
+                <field name="kategori_pilihan"/>
+            </xpath>
+        </field>
+    </record>
+
      <record id="peserta_form_inherite" model="ir.ui.view">
         <field name="name">peserta_form_inherite</field>
         <field name="model">res.partner</field>
@@ -7,6 +23,9 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='is_admin']" position="after">
                 <field name="is_peserta"/>
+            </xpath>
+            <xpath expr="//field[@name='is_peserta']" position="after">
+                <field name="kategori_pilihan"/>
             </xpath>
         </field>
     </record>
@@ -22,6 +41,7 @@
             </field>
        </field>
     </record>
+
     <record id="peserta_action" model="ir.actions.act_window">
         <field name="name">peserta kursus</field>
         <field name="type">ir.actions.act_window</field>
@@ -37,7 +57,7 @@
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="peserta_menu_categ"
               name="Data peserta Kursus"
-              parent="kursusku_root"
+              parent="peserta_categ"
               action="peserta_action"
-              sequence="40"/>
+              sequence="10"/>
 </odoo>

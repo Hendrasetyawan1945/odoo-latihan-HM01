@@ -12,6 +12,24 @@
         </field>
     </record>
 
+    <record id="sesioninggris_view_form" model="ir.ui.view">
+        <field name="name">sesioninggris_view_form</field>
+        <field name="model">kursusku.sesioninggris</field>
+        <field name="arch" type="xml">
+            <form string="sesioninggris_form">
+                <sheet>
+                    <group>
+                       <field name="nama_kursus"/>
+                        <field name="tgl_mulai"/>
+                    </group>
+                    <group>
+                       <field name="pesertaa_idss"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="sesioninggris_action" model="ir.actions.act_window">
         <field name="name">Inggris Sesion</field>
         <field name="type">ir.actions.act_window</field>

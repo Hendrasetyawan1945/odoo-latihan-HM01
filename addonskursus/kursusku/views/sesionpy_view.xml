@@ -7,11 +7,33 @@
             <tree string="sesionpy_tree">
                 <field name="nama_kursus"/>
                 <field name="tgl_mulai"/>
-                <field name="peserta_ids"/>
+                <field name="nama_tutor"/>
             </tree>
         </field>
     </record>
     
+    <record id="sesionpy_view_form" model="ir.ui.view">
+        <field name="name">sesionpy_view_form</field>
+        <field name="model">kursusku.sesionpy</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <field name="nama_kursus"/>
+                        <field name="tgl_mulai"/>
+                        <field name="nama_tutor"/>
+                    </group>
+                    <notebook colspan="4">
+                        <page name="peserta" string="Peserta">
+                            <tree>
+                                <field name="peserta_pemerograman_ids"/>
+                            </tree>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
     <record id="sesionpy_action" model="ir.actions.act_window">
         <field name="name"></field>
         <field name="type">ir.actions.act_window</field>

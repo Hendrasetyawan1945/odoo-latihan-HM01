@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-
-
+<record id="penyelenggara_tree_inherite" model="ir.ui.view">
+        <field name="name">penyelenggara_tree_inherite</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="is_admin"/>
+            </xpath>
+        </field>
+    </record>
 
     <!-- Inherit Form View to Modify it -->
     <record id="penyelenggara_form_inherite" model="ir.ui.view">
@@ -16,7 +23,6 @@
         </field>
     </record>
 
-    
     <record id="penyelenggara_search" model="ir.ui.view">
         <field name="name">penyelenggara_search</field>
         <field name="model">res.partner</field>
@@ -29,12 +35,12 @@
     </record>
 
     <record id="penyelenggara_action" model="ir.actions.act_window">
-        <field name="name">Penyelenggra kursus</field>
+        <field name="name">Penyelenggara kursus</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form,kanban</field>
         <field name="context">{
-                'search_default_adminya':1,
+                'search_default_adminnya':1,
                 'default_is_admin':True,
             }
         </field>
