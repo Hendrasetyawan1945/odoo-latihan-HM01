@@ -7,7 +7,9 @@
             <tree string="sesionpy_tree">
                 <field name="nama_kursus"/>
                 <field name="tgl_mulai"/>
+                <field name="jum_siswa"/>
                 <field name="nama_tutor"/>
+
             </tree>
         </field>
     </record>
@@ -21,6 +23,7 @@
                     <group>
                         <field name="nama_kursus"/>
                         <field name="tgl_mulai"/>
+                        <field name="jum_siswa"/>
                         <field name="nama_tutor"/>
                     </group>
                     <notebook colspan='4'>

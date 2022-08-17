@@ -28,7 +28,20 @@ class sesionpy(models.Model):
         inverse_name='sesionpy_ids',
         string='Peserta Pemerograman IDS',
         required=False)
+    jum_siswa = fields.Integer(
+        compute='_compute_siswa',
+        string='Jumplah Siswa',
+        required=False)
 
+
+    @api.model
+    def _compute_siswa(self):
+        for i in self: #mapped = mengambil
+            a = self.env['kursusku.pesertapemerograman'].search([('sesionpy_ids', '=', i.id)]).mapped('display_name')
+            b = len(a)
+            i.jum_siswa= b
+            #menambah dari model python == untuk menghitung
+            i.nama_kursus.jum_siswa_prog = b
 
 
 
@@ -41,7 +54,7 @@ class pesertapemerograman(models.Model):
         comodel_name='res.partner',
         string='Peserta Pemrograman',
         required=False,
-        domain=[('is_peserta', '=', True) ])#and ('kategori_pilihan', '=', 'teknologi')])
+        domain=[('is_peserta', '=', True)])#and ('kategori_pilihan', '=', 'teknologi')])
 
     # domain=[('is_peserta', '=', True) and ('kategori_pilihan', '=', 'Teknologi')]
     # domaian=[('is_peserta', '=', True)] and [('kategori_pilihan', '=', 'Teknologi')]

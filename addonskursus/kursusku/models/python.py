@@ -22,30 +22,42 @@ class python(models.Model):
     kapasitas = fields.Integer(
         string='Kapasitas Kelas',
         required=False)
-    sisa = fields.Integer(compute='_compute_sisa',
+    jum_siswa_prog = fields.Integer(
+        string='Jumplah Siswa',
+        required=False)
+    sisa = fields.Integer(
+        compute='_compute_sisa',
         string='Kelas yang kosong',
         required=False)
 
 
-
+    @api.depends('jum_siswa_prog')
+    def _compute_sisa(self):
+        for i in self:
+            i.sisa = i.kapasitas - i.jum_siswa_prog
 
     @api.depends('level_kesulitan')
     def _compute_harga(self):
         for a in self:
             a.harga=a.level_kesulitan.harga
 
-    @api.depends('sisa')
-    def _compute_sisa(self):
-        for a in self:
-            a.sisa = a.kapasitas
 
-class java(models.Model):
-    _inherit = 'kursusku.python'
-    _name = 'kursusku.java'
-    _description = 'kelas Java'
-    starup = fields.Char(
-        string='Starup',
-        required=False)
+
+
+
+    # @api.depends('sisa')
+    # def _compute_sisa(self):
+    #     for a in self:
+    #         a.sisa = a.kapasitas
+
+
+# class java(models.Model):
+#     _inherit = 'kursusku.python'
+#     _name = 'kursusku.java'
+#     _description = 'kelas Java'
+#     starup = fields.Char(
+#         string='Starup',
+#         required=False)
 
 
 
