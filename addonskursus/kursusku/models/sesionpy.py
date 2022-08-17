@@ -13,7 +13,9 @@ class sesionpy(models.Model):
     nama_tutor = fields.Many2one(
         comodel_name='res.partner',
         string='Nama Tutor',
-        required=False)
+        required=False,
+        domain=[('function', '=', 'Pemerograman')])
+
 
     tgl_mulai= fields.Datetime(
         string='Tanggal mulai',
@@ -21,17 +23,13 @@ class sesionpy(models.Model):
          default=fields.Datetime.now()
      )
 
-    peserta_ids = fields.One2many(
-        comodel_name='res.partner',
-        inverse_name='kursus',
-        string='Peserta_ids',
-        required=False)
-
-    peserta_pemerograman_ids = fields.One2many(
+    peserta_pemrograman_ids = fields.One2many(
         comodel_name='kursusku.pesertapemerograman',
         inverse_name='sesionpy_ids',
-        string='Peserta pemerograman ids',
+        string='Peserta Pemerograman IDS',
         required=False)
+
+
 
 
 class pesertapemerograman(models.Model):
@@ -41,10 +39,14 @@ class pesertapemerograman(models.Model):
     name = fields.Char()
     peserta_ids = fields.Many2one(
         comodel_name='res.partner',
-        string='Peserta Pemerograman',
-        required=False)
+        string='Peserta Pemrograman',
+        required=False,
+        domain=[('is_peserta', '=', True) ])#and ('kategori_pilihan', '=', 'teknologi')])
+
+    # domain=[('is_peserta', '=', True) and ('kategori_pilihan', '=', 'Teknologi')]
+    # domaian=[('is_peserta', '=', True)] and [('kategori_pilihan', '=', 'Teknologi')]
 
     sesionpy_ids = fields.Many2one(
         comodel_name='kursusku.sesionpy',
-        string='Sesion Python ids',
+        string='Session Python id',
         required=False)

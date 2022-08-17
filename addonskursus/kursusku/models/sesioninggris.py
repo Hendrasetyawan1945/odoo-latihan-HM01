@@ -8,7 +8,9 @@ class sesioinngris(models.Model):
     nama_kursus = fields.Many2one(
         comodel_name='kursusku.inggris',
         string='Nama_kursus',
-        required=False)
+        required=False,
+
+    )
 
     tgl_mulai= fields.Datetime(
         string='Tanggal mulai',

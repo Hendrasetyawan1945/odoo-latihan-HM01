@@ -23,19 +23,23 @@
                         <field name="tgl_mulai"/>
                         <field name="nama_tutor"/>
                     </group>
-                    <notebook colspan="4">
-                        <page name="peserta" string="Peserta">
-                            <tree>
-                                <field name="peserta_pemerograman_ids"/>
-                            </tree>
+                    <notebook colspan='4'>
+                        <page name="peserta" string="Peserta Pemerograman">
+                            <field name="peserta_pemrograman_ids">
+                                <tree editable="bottom">
+                                    <field name="peserta_ids"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>
             </form>
         </field>
     </record>
+
+
     <record id="sesionpy_action" model="ir.actions.act_window">
-        <field name="name"></field>
+        <field name="name">Sesion Pemerograman Python Peserta</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">kursusku.sesionpy</field>
         <field name="view_mode">tree,form</field>
