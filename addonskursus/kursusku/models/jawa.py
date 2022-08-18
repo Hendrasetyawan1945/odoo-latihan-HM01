@@ -19,6 +19,9 @@ class jawa(models.Model):
     sisa = fields.Integer(compute='_compute_sisa',
                           string='Kelas yang kosong',
                           required=False)
+    jum_siswa = fields.Integer(
+        string='Jumplah Siswa',
+        required=False)
 
     @api.depends('level_kesulitan')
     def _compute_harga(self):
@@ -27,5 +30,5 @@ class jawa(models.Model):
 
     @api.depends('sisa')
     def _compute_sisa(self):
-        for a in self:
-            a.sisa = a.kapasitas
+        for i in self:
+            i.sisa = i.kapasitas - i.jum_siswa

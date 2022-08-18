@@ -38,12 +38,12 @@
             <field name="parent_id" position="after">
                 <filter  string="Peserta" name="pesertanya"  domain="[('is_peserta','=',True)]"/>
                 <filter  string="Function" name="functionnya"  domain="[('function','=',True)]"/>
-                <filter  string="Kategori_pilihan" name="kategori_pilihannya"  domain="[('kategori_pilihan','=',True),('kategori_pilihan', '=', 'bahasa')]"/>
+                <filter  string="Kategori_pilihan" name="kategori_pilihannya"  domain="[('kategori_pilihan', '=', 'bahasa')]"/>
             </field>
        </field>
     </record>
 
-
+    <!--
     <record id="peserta_search" model="ir.ui.view">
        <field name="name">pencarian...</field>
        <field name="model">res.partner</field>
@@ -54,7 +54,7 @@
         </search>
       </field>
     </record>
-
+-->
 
     <record id="peserta_action" model="ir.actions.act_window">
         <field name="name">peserta kursus</field>

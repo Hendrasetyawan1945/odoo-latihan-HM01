@@ -64,5 +64,5 @@
               name="Sesion Inggris"
               parent="bahasa_categ"
               action="sesioninggris_action"
-              sequence="20"/>
+              sequence="30"/>
 </odoo>

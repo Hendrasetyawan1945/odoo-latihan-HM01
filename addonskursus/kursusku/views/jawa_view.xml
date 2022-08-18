@@ -4,15 +4,17 @@
         <field name="name">jawa_view_tree</field>
         <field name="model">kursusku.jawa</field>
         <field name="arch" type="xml">
-            <tree string="inggris_tree">
+            <tree string="jawa_tree">
                 <field name="name"/>
                 <field name="level_kesulitan"/>
                 <field name="kapasitas"/>
                 <field name="sisa"/>
+                <field name="jum_siswa"/>
                 <field name="harga"/>
             </tree>
         </field>
     </record>
+
 
     <record id="jawa_action" model="ir.actions.act_window">
         <field name="name">Daftar kursus Jawa</field>

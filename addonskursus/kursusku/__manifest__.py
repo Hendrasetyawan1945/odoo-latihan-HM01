@@ -40,6 +40,7 @@
         'views/sesionpy_view.xml',
         'views/sesionlain_view.xml',
         'views/sesioninggris_view.xml',
+        'views/sesionjawa_view.xml',
 
     ],
     # only loaded in demonstration mode
