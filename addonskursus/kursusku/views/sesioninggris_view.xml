@@ -39,6 +39,19 @@
         </field>
     </record>
 
+    <record id="python_search" model="ir.ui.view">
+       <field name="name">pencarian</field>
+       <field name="model">kursusku.python</field>
+        <field name="arch" type="xml">
+            <search string="Masukan Pencarian">
+                <field name="name"/>
+                <field name="pengajar"/>
+                <field name="harga"/>
+                <field name="kapasitas"/>
+        </search>
+       </field>
+    </record>
+
     <record id="sesioninggris_action" model="ir.actions.act_window">
         <field name="name">Inggris Sesion</field>
         <field name="type">ir.actions.act_window</field>

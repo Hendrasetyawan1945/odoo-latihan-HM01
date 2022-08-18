@@ -37,6 +37,17 @@
        </field>
     </record>
 
+<!--     <record id="penyelenggara_search" model="ir.ui.view">-->
+<!--       <field name="name">pencarian..</field>-->
+<!--       <field name="model">res.partner</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search string="Masukan Pencarian....?">-->
+<!--                <field name="function"/>-->
+<!--                <field name="kategori_pilihan"/>-->
+<!--        </search>-->
+<!--       </field>-->
+<!--    </record>-->
+
     <record id="penyelenggara_action" model="ir.actions.act_window">
         <field name="name">Penyelenggara kursus</field>
         <field name="type">ir.actions.act_window</field>
