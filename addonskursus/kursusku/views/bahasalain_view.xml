@@ -10,6 +10,7 @@
                 <field name="level_kesulitan"/>
                 <field name="kapasitas"/>
                 <field name="sisa"/>
+                <field name="jum_siswa_bing"/>
                 <field name="harga"/>
                 <field name="negara"/>
             </tree>
@@ -28,7 +29,9 @@
                         <field name="level_kesulitan"/>
                         <field name="kapasitas"/>
                         <field name="sisa"/>
+                        <field name="jum_siswa_bing"/>
                         <field name="harga"/>
+                        <field name="negara"/>
                     </group>
                 </sheet>
             </form>
@@ -36,7 +39,7 @@
     </record>
 
     <record id="bahasalain_action" model="ir.actions.act_window">
-        <field name="name">Daftar kursus Lain-lain</field>
+        <field name="name">Daftar Lain-lain</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">kursusku.bahasalain</field>
         <field name="view_mode">tree,form</field>
@@ -44,8 +47,8 @@
 
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="bahasalain_categ"
-              name="Kursus Bahasa Lain-lain"
+              name="Kursus Lain-lain"
               parent="pemerograman_categ"
               action="bahasalain_action"
-              sequence="40"/>
+              sequence="30"/>
 </odoo>

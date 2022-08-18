@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sesionlain_view_tree" model="ir.ui.view">
+        <field name="name">sesionlain_view_tree</field>
+        <field name="model">kursusku.sesionlain</field>
+        <field name="arch" type="xml">
+            <tree string="sesionlain_tree">
+                <field name="nama_kursus"/>
+                <field name="tgl_mulai"/>
+                <field name="jum_siswa"/>
+                <field name="nama_tutor"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sesionlain_view_form" model="ir.ui.view">
+        <field name="name">sesionlain_view_form</field>
+        <field name="model">kursusku.sesionlain</field>
+        <field name="arch" type="xml">
+            <form string="sesionlain_form">
+                <sheet>
+                    <group>
+                        <field name="nama_kursus"/>
+                        <field name="tgl_mulai"/>
+                        <field name="jum_siswa"/>
+                        <field name="nama_tutor"/>
+                    </group>
+                    <notebook colspan='6'>
+                        <page name="peserta" string="Peserta Pemerograman">
+                            <field name="peserta_pemrograman_ids">
+                                <tree editable="bottom">
+                                    <field name="peserta_ids"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="sesionlain_action" model="ir.actions.act_window">
+        <field name="name">Lain-Lain Sesion</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kursusku.sesionlain</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="sesionlain_categ"
+              name="Sesion Lain Lain"
+              parent="bahasa_categ"
+              action="sesionlain_action"
+              sequence="30"/>
+</odoo>

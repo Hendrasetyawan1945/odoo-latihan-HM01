@@ -50,6 +50,9 @@ class bahasalain(models.Model):
     _description = "diskirpsi mencoba class"
 
     name = fields.Char(string='Kelas Bahasa Lain')
+    sisa = fields.Integer(compute='_compute_sisa',
+                          string='Kelas yang kosong',
+                          required=False)
     negara = fields.Char(
         string='Negara', 
         required=False)

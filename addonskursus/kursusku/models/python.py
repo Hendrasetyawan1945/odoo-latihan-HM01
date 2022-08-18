@@ -6,7 +6,6 @@ class python(models.Model):
     _description = 'Kategori '
 
     name = fields.Char(string='Kelas python')
-
     harga = fields.Integer(compute='_compute_harga',
         string='Harga Kursus',
         required=False)
@@ -14,7 +13,6 @@ class python(models.Model):
         comodel_name='kursusku.pengajar',
         string='Pengajar',
         required=False)
-
     level_kesulitan = fields.Many2one(
         comodel_name='kursusku.tingkat',
         string='Level kesulitan Kelas',

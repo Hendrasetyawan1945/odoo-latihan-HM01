@@ -10,5 +10,6 @@ from . import penyelenggara
 from . import pengajar
 from . import sesionpy
 from . import sesioninggris
+from . import sesionlain
 #from . import pesertapemerograman
 

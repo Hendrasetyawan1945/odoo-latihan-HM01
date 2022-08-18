@@ -6,6 +6,8 @@ access_kursusku_bahasalain,access.kursusku.bahasalain,model_kursusku_bahasalain,
 access_kursusku_pengajar,access.pengajar.jawa,model_kursusku_pengajar,,1,1,1,1
 access_kursusku_tingkat,access.kursusku.tingkat,model_kursusku_tingkat,,1,1,1,1
 access_kursusku_sesionpy,access.kursusku.sesionpy,model_kursusku_sesionpy,,1,1,1,1
-access_kursusku_pesertapemerograman,access.kursusku.pesertapemerograman,model_kursusku_pesertapemerograman,,1,1,1,1
 access_kursusku_sesioninggris,access.kursusku.sesioninggris,model_kursusku_sesioninggris,,1,1,1,1
+access_kursusku_sesionlain,access.kursusku.sesionlain,model_kursusku_sesionlain,,1,1,1,1
+access_kursusku_pesertalain,access.kursusku.pesertalain,model_kursusku_pesertalain,,1,1,1,1
 access_kursusku_pesertabing,access.kursusku.pesertabing,model_kursusku_pesertabing,,1,1,1,1
+access_kursusku_pesertapemerograman,access.kursusku.pesertapemerograman,model_kursusku_pesertapemerograman,,1,1,1,1

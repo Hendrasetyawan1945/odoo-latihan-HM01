@@ -38,6 +38,7 @@
         'views/peserta_view.xml',
         'views/pengajar_view.xml',
         'views/sesionpy_view.xml',
+        'views/sesionlain_view.xml',
         'views/sesioninggris_view.xml',
 
     ],

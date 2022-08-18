@@ -26,5 +26,5 @@
               name="Kursus Jawa"
               parent="pemerograman_categ"
               action="jawa_action"
-              sequence="30"/>
+              sequence="40"/>
 </odoo>
