@@ -45,7 +45,7 @@
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="bahasalain_categ"
               name="Kursus Bahasa Lain-lain"
-              parent="bahasa_categ"
+              parent="pemerograman_categ"
               action="bahasalain_action"
-              sequence="30"/>
+              sequence="40"/>
 </odoo>

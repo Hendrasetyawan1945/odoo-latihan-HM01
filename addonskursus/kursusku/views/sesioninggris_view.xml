@@ -7,7 +7,8 @@
             <tree string="sesioninggris_tree">
                 <field name="nama_kursus"/>
                 <field name="tgl_mulai"/>
-                <field name="pesertaa_idss"/>
+                <field name="jum_siswa"/>
+                <field name="nama_tutor"/>
             </tree>
         </field>
     </record>
@@ -19,12 +20,20 @@
             <form string="sesioninggris_form">
                 <sheet>
                     <group>
-                       <field name="nama_kursus"/>
+                        <field name="nama_kursus"/>
                         <field name="tgl_mulai"/>
+                        <field name="jum_siswa"/>
+                        <field name="nama_tutor"/>
                     </group>
-                    <group>
-                       <field name="pesertaa_idss"/>
-                    </group>
+                    <notebook colspan='6'>
+                        <page name="peserta" string="Peserta Pemerograman">
+                            <field name="peserta_pemrograman_ids">
+                                <tree editable="bottom">
+                                    <field name="peserta_ids"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -40,7 +49,7 @@
 
     <menuitem id="sesioninggris_categ"
               name="Sesion Inggris"
-              parent="pemerograman_categ"
+              parent="bahasa_categ"
               action="sesioninggris_action"
-              sequence="30"/>
+              sequence="20"/>
 </odoo>

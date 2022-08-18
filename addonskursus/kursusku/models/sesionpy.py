@@ -54,8 +54,9 @@ class pesertapemerograman(models.Model):
         comodel_name='res.partner',
         string='Peserta Pemrograman',
         required=False,
-        domain=[('is_peserta', '=', True)])#and ('kategori_pilihan', '=', 'teknologi')])
+        domain=[('is_peserta', '=', True), ('kategori_pilihan', '=', 'teknologi')])
 
+    # domain=[('is_peserta', '=', True) and ('jenis_kursus', '=', 'pemrograman')])
     # domain=[('is_peserta', '=', True) and ('kategori_pilihan', '=', 'Teknologi')]
     # domaian=[('is_peserta', '=', True)] and [('kategori_pilihan', '=', 'Teknologi')]
 

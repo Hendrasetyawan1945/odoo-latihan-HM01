@@ -9,7 +9,6 @@
                 <field name="tgl_mulai"/>
                 <field name="jum_siswa"/>
                 <field name="nama_tutor"/>
-
             </tree>
         </field>
     </record>
@@ -51,7 +50,7 @@
     
     <menuitem id="sesionpy_categ" 
               name="Sesion Python" 
-              parent="pemerograman_categ"  
+              parent="bahasa_categ"
               action="sesionpy_action"
-              sequence="40"/>
+              sequence="10"/>
 </odoo>

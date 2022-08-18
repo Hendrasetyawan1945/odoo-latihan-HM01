@@ -24,7 +24,7 @@
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="jawa_categ"
               name="Kursus Jawa"
-              parent="bahasa_categ"
+              parent="pemerograman_categ"
               action="jawa_action"
-              sequence="20"/>
+              sequence="30"/>
 </odoo>

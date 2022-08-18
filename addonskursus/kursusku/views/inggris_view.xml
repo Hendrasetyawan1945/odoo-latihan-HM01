@@ -9,8 +9,30 @@
                 <field name="level_kesulitan"/>
                 <field name="kapasitas"/>
                 <field name="sisa"/>
+                <field name="jum_siswa_bing"/>
                 <field name="harga"/>
+                <field name="pengajar"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="inggris_view_form" model="ir.ui.view">
+        <field name="name">inggris_view_form</field>
+        <field name="model">kursusku.inggris</field>
+        <field name="arch" type="xml">
+            <form string="inggris_form">
+                <sheet>
+                    <group>
+                            <field name="name"/>
+                            <field name="level_kesulitan"/>
+                            <field name="kapasitas"/>
+                            <field name="sisa"/>
+                            <field name="jum_siswa_bing"/>
+                            <field name="harga"/>
+                            <field name="pengajar"/>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 
@@ -24,7 +46,7 @@
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="inggris_categ"
               name="Kursus Inggris"
-              parent="bahasa_categ"
+              parent="pemerograman_categ"
               action="binggris_action"
-              sequence="10"/>
+              sequence="20"/>
 </odoo>
