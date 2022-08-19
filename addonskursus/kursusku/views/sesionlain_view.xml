@@ -53,5 +53,5 @@
               name="Sesion Lain Lain"
               parent="bahasa_categ"
               action="sesionlain_action"
-              sequence="40"/>
+              sequence="30"/>
 </odoo>

@@ -36,6 +36,29 @@
         </field>
     </record>
 
+    <record id="inggris" model="ir.ui.view">
+       <field name="name">inggris</field>
+       <field name="model">kursusku.inggris</field>
+        <field name="arch" type="xml">
+            <search string="Pencarian Inggris">
+                <field name="name"/>
+                <field name="kapasitas"/>
+                <field name="sisa"/>
+                <field name="jum_siswa_bing"/>
+                <field name="harga"/>
+                <field name="level_kesulitan"/>
+            </search>
+<!--            <field name="name" position="after">-->
+
+<!--                <filter string="Level" name="level_kesulitan" domain="[('level_kesulitan','=', 'easy')]"/>-->
+<!--                <separator/>-->
+<!--                <filter string="Level" name="level_kesulitan" domain="[('level_kesulitan','=', 'normal')]"/>-->
+<!--                <separator/>-->
+<!--                <filter string="Level" name="level_kesulitan" domain="[('level_kesulitan','=', 'hard')]"/>-->
+
+<!--            </field>-->
+       </field>
+    </record>
     <record id="binggris_action" model="ir.actions.act_window">
         <field name="name">Daftar kursus Inggris</field>
         <field name="type">ir.actions.act_window</field>

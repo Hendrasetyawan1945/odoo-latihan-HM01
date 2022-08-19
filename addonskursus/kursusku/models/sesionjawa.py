@@ -6,7 +6,7 @@ class sesionjawa(models.Model):
     _description = 'Description'
 
     nama_kursus = fields.Many2one(
-        comodel_name='kursusku.python',
+        comodel_name='kursusku.jawa',
         string='Nama_kursus',
         required=False)
 

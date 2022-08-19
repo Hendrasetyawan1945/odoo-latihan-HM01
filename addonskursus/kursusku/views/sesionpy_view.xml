@@ -38,7 +38,25 @@
             </form>
         </field>
     </record>
-
+<!--
+    <record id="pencarian_sesionpy" model="ir.ui.view">
+       <field name="name">pencarian_sesionpy</field>
+       <field name="model">kursusku.sesionpy</field>
+        <field name="arch" type="xml">
+            <search string="Pencarian Sesion Pythom">
+                <field name="nama_kursus"/>
+                <field name="tgl_mulai"/>
+                <field name="jum_siswa"/>
+                <field name="nama_tutor"/>
+                <filter string="Nama kursus" name="nama_kursus" domain="[('jum_siswa', '=', 0)]"
+                help="Mencari jumplah siswa )"/>
+                <group expand="1" string="Group By">
+                    <filter string="peserta pemrograman ids" name="peserta_pemrograman_ids" context="{'group_by':'peserta_pemrograman_ids'}"/>
+                </group>
+        </search>
+       </field>
+    </record>
+    -->
 
     <record id="sesionpy_action" model="ir.actions.act_window">
         <field name="name">Sesion Pemerograman Python Peserta</field>
@@ -52,5 +70,5 @@
               name="Sesion Python" 
               parent="bahasa_categ"
               action="sesionpy_action"
-              sequence="20"/>
+              sequence="10"/>
 </odoo>

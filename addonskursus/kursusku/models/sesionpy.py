@@ -45,6 +45,7 @@ class sesionpy(models.Model):
 
 
 
+
 class pesertapemerograman(models.Model):
     _name = 'kursusku.pesertapemerograman'
     _description = 'peserta pemerograman'

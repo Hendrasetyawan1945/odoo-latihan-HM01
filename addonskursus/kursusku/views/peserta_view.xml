@@ -39,6 +39,10 @@
                 <filter  string="Peserta" name="pesertanya"  domain="[('is_peserta','=',True)]"/>
                 <filter  string="Function" name="functionnya"  domain="[('function','=',True)]"/>
                 <filter  string="Kategori_pilihan" name="kategori_pilihannya"  domain="[('kategori_pilihan', '=', 'bahasa')]"/>
+                <separator/>
+                <filter  string="Kategori_pilihan" name="kategori_pilihannya"  domain="[('kategori_pilihan', '=', 'teknologi')]"/>
+                <separator/>
+                <filter  string="Kategori_pilihan" name="kategori_pilihannya"  domain="[('kategori_pilihan', '=', 'umum')]"/>
             </field>
        </field>
     </record>

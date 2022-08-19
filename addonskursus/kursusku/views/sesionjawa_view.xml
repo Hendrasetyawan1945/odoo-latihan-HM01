@@ -48,9 +48,9 @@
     </record>
 
 
-    <menuitem id="sesionpy_categ"
+    <menuitem id="sesionjawa_categ"
               name="Sesion Jawa"
               parent="bahasa_categ"
-              action="sesionpy_action"
-              sequence="50"/>
+              action="sesionjawa_action"
+              sequence="40"/>
 </odoo>

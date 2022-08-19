@@ -38,6 +38,33 @@
         </field>
     </record>
 
+<!--    <record id="pencarian_lain" model="ir.ui.view">-->
+<!--       <field name="name">pencarian_lain</field>-->
+<!--       <field name="model">kursusku.bahasalain</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search string="Pencarian Lain Lain">-->
+<!--                <field name="nama"/>-->
+<!--                <field name="level_kesulitan"/>-->
+<!--                <field name="kapasitas"/>-->
+<!--                <field name="sisa"/>-->
+<!--                <field name="jum_siswa_bing"/>-->
+<!--                <field name="harga"/>-->
+<!--                <filter domain="[('kapasitas', '=', 'draft')]"/>-->
+<!--                <separator/>-->
+<!--                <filter domain="[('jum_siswa_bing', '<', 15)]"/>-->
+<!--                <filter string="Jumlah Siswa" name="jum_siswa_bing" domain="[('jum_siswa_bing', '=', 0)]"-->
+<!--                help="Mencari jumplah siswa )"/>-->
+<!--                <filter string="Kapasita" name="kapasitas" domain="[('kapasitas', '<', 15)]"-->
+<!--                help="Mencari jumplah siswa )"/>-->
+<!--                <separator/>-->
+<!--                <group expand="1" string="Group By">-->
+<!--                    <filter string="Harga" name="harga" context="{'group_by':'harga'}"/>-->
+<!--                </group>-->
+<!--        </search>-->
+<!--       </field>-->
+<!--    </record>-->
+
+
     <record id="bahasalain_action" model="ir.actions.act_window">
         <field name="name">Daftar Lain-lain</field>
         <field name="type">ir.actions.act_window</field>
