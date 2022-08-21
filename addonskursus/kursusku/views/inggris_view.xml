@@ -36,9 +36,11 @@
         </field>
     </record>
 
+    
+
     <record id="inggris" model="ir.ui.view">
-       <field name="name">inggris</field>
-       <field name="model">kursusku.inggris</field>
+        <field name="name">inggris</field>
+        <field name="model">kursusku.inggris</field>
         <field name="arch" type="xml">
             <search string="Pencarian Inggris">
                 <field name="name"/>
@@ -57,8 +59,9 @@
 <!--                <filter string="Level" name="level_kesulitan" domain="[('level_kesulitan','=', 'hard')]"/>-->
 
 <!--            </field>-->
-       </field>
+    </field>
     </record>
+
     <record id="binggris_action" model="ir.actions.act_window">
         <field name="name">Daftar kursus Inggris</field>
         <field name="type">ir.actions.act_window</field>
